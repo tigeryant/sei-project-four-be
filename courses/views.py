@@ -21,15 +21,51 @@
 
 ########################
 
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+# from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-from .models import Course
-from .serializers import CourseSerializer
+# from .models import Course
+# from .serializers import CourseSerializer
+
+# class CourseListView(ListCreateAPIView):
+#     queryset = Course.objects.all()
+#     serializer_class = CourseSerializer
+
+# class CourseDetailView(RetrieveUpdateDestroyAPIView):
+#     queryset = Course.objects.all()
+#     serializer_class = CourseSerializer
+
+###########################
+
+from rest_framework.generics import (
+    ListCreateAPIView,
+    RetrieveUpdateDestroyAPIView,
+    CreateAPIView,
+    DestroyAPIView,
+)
+
+from .models import Course, Review
+from .serializers import CourseSerializer, ReviewSerializer
 
 class CourseListView(ListCreateAPIView):
+    ''' View for /course endpoint GET/POST '''
+
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
 class CourseDetailView(RetrieveUpdateDestroyAPIView):
+    ''' View for /course/id endpoint GET/PUT/PATCH/DELETE'''
+
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+
+class ReviewListView(CreateAPIView):
+    ''' View for /course/id/reviews POST'''
+
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
+
+class ReviewDetailView(DestroyAPIView):
+    ''' View for /course/id/reviews/reviewId DELETE'''
+
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
