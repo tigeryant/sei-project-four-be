@@ -42,6 +42,7 @@ from rest_framework.generics import (
     CreateAPIView,
     DestroyAPIView,
 )
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .models import Course, Review
 from .serializers import CourseSerializer, ReviewSerializer
@@ -51,21 +52,25 @@ class CourseListView(ListCreateAPIView):
 
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
 class CourseDetailView(RetrieveUpdateDestroyAPIView):
     ''' View for /course/id endpoint GET/PUT/PATCH/DELETE'''
 
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+    # is auth or read only
 
 class ReviewListView(CreateAPIView):
     ''' View for /course/id/reviews POST'''
 
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+    # is auth or read only (i think? note the HTTP method though)
 
 class ReviewDetailView(DestroyAPIView):
     ''' View for /course/id/reviews/reviewId DELETE'''
 
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+    # is auth or read only (i think? note the HTTP method though)

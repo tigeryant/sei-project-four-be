@@ -10,6 +10,7 @@ psycopg2-binary = "*"
 djangorestframework = "*"
 pylint-django = "*"
 djangorestframework-camel-case = "*"
+pyjwt = "*"
 
 [dev-packages]
 
