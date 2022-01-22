@@ -14,8 +14,22 @@ class Course(models.Model):
     length = models.PositiveIntegerField()
     # see the relationships recording for how to make relationships between models
     # prerequisite
-    # review =
+    # reviews =
     # syllabus =
 
     def __str__(self):
         return f'{self.name}'
+
+class Review(models.Model):
+    ''' Review Model '''
+    content = models.TextField(max_length=300)
+    rating = models.PositiveIntegerField()
+    # created_at = models.DateTimeField(auto_now_add=True)
+    course = models.ForeignKey(
+        Course,
+        related_name='reviews',
+        on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        return f'Review {self.id} of Course {self.course}'

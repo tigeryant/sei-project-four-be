@@ -1,0 +1,44 @@
+[
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "name": "Test course 1",
+    "length": 6
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "name": "Test course 2",
+    "length": 2
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "name": "Test course 3",
+    "length": 4
+  }
+},
+{
+  "model": "courses.review",
+  "pk": 1,
+  "fields": {
+    "content": "This is my first review",
+    "rating": 3,
+    "course": 1
+  }
+},
+{
+  "model": "courses.review",
+  "pk": 2,
+  "fields": {
+    "content": "This is my second review!!",
+    "rating": 1,
+    "course": 3
+  }
+}
+]
