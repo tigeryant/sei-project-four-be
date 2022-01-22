@@ -59,18 +59,18 @@ class CourseDetailView(RetrieveUpdateDestroyAPIView):
 
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
-    # is auth or read only
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
 class ReviewListView(CreateAPIView):
     ''' View for /course/id/reviews POST'''
 
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    # is auth or read only (i think? note the HTTP method though)
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
 class ReviewDetailView(DestroyAPIView):
     ''' View for /course/id/reviews/reviewId DELETE'''
 
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    # is auth or read only (i think? note the HTTP method though)
+    permission_classes = (IsAuthenticatedOrReadOnly, )
