@@ -31,14 +31,5 @@
     "rating": 3,
     "course": 1
   }
-},
-{
-  "model": "courses.review",
-  "pk": 2,
-  "fields": {
-    "content": "This is my second review!!",
-    "rating": 1,
-    "course": 3
-  }
 }
 ]

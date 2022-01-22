@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jwt_auth',
     'rest_framework',
     'courses',
 ]
@@ -135,3 +136,5 @@ REST_FRAMEWORK = {
         'djangorestframework_camel_case.parser.CamelCaseJSONParser',
     )
 }
+
+AUTH_USER_MODEL = 'jwt_auth.User'
