@@ -8,7 +8,6 @@ class Course(models.Model):
     # is_starter = models.BooleanField(default=False)
     # generation = models.PositiveIntegerField()
     # pokedex_entry =  models.TextField(max_length=300)
-    # image = models.CharField(max_length=300)
 
     name = models.CharField(max_length=100, unique=True)
     length = models.PositiveIntegerField()
@@ -16,6 +15,11 @@ class Course(models.Model):
     # prerequisite - FK that links to itself (many to many)
     # reviews - FK, one to many that links to the review
     # syllabus - FK, one to many that links to the weekly syllabus, maybe this should be on the WeeklySyllabus model
+
+    # ADD AN IMAGE FIELD
+    # ADD AN INSTRUCTOR FIELD
+    image = models.CharField(max_length=300)
+    instructor = models.CharField(max_length=100)
 
     def __str__(self):
         return f'{self.name}'
