@@ -43,6 +43,7 @@ from rest_framework.generics import (
     DestroyAPIView,
 )
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from .permissions import isOwnerOrReadOnly
 
 from .models import Course, Review
 from .serializers import CourseSerializer, ReviewSerializer
@@ -73,4 +74,4 @@ class ReviewDetailView(DestroyAPIView):
 
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (isOwnerOrReadOnly, )
