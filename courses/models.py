@@ -12,10 +12,10 @@ class Course(models.Model):
 
     name = models.CharField(max_length=100, unique=True)
     length = models.PositiveIntegerField()
-    # see the relationships recording for how to make relationships between models
-    # prerequisite
-    # reviews =
-    # syllabus =
+    # NEW FIELDS
+    # prerequisite - FK that links to itself (many to many)
+    # reviews - FK, one to many that links to the review
+    # syllabus - FK, one to many that links to the weekly syllabus, maybe this should be on the WeeklySyllabus model
 
     def __str__(self):
         return f'{self.name}'
@@ -38,3 +38,18 @@ class Review(models.Model):
 
     def __str__(self):
         return f'Review {self.id} of Course {self.course}'
+
+## new models:
+
+# WEEKLYSYLLABUS
+# syllabus id
+# content
+
+# SKILL GAINED
+# skill id
+
+
+## USER (this will be in jwt_auth, not here)
+# User id
+# email
+# password
