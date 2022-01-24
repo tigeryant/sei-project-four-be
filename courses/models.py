@@ -10,16 +10,13 @@ class Course(models.Model):
     # pokedex_entry =  models.TextField(max_length=300)
 
     name = models.CharField(max_length=100, unique=True)
-    length = models.PositiveIntegerField()
-    # NEW FIELDS
-    # prerequisite - FK that links to itself (many to many)
-    # reviews - FK, one to many that links to the review
-    # syllabus - FK, one to many that links to the weekly syllabus, maybe this should be on the WeeklySyllabus model
-
-    # ADD AN IMAGE FIELD
-    # ADD AN INSTRUCTOR FIELD
     image = models.CharField(max_length=300)
-    instructor = models.CharField(max_length=100)
+    length = models.PositiveIntegerField()
+    overview = models.TextField(max_length=300)
+    prerequisites = models.ManyToManyField('self')
+    instructor_name = models.CharField(max_length=100)
+    instructor_image = models.CharField(max_length=300)
+    instructor_bio = models.TextField(max_length=300)
 
     def __str__(self):
         return f'{self.name}'
@@ -43,14 +40,39 @@ class Review(models.Model):
     def __str__(self):
         return f'Review {self.id} of Course {self.course}'
 
-## new models:
+class WeeklySyllabus(models.Model):
+    ''' Weekly Syllabus Model'''
+    content=models.TextField(max_length=300)
+    description = models.TextField(max_length=300)
+    week = models.PositiveIntegerField()
+    course = models.ForeignKey(
+        Course,
+        related_name='weekly_syllabuses',
+        on_delete=models.CASCADE
+    )
 
-# WEEKLYSYLLABUS
-# syllabus id
-# content
+    def __str__(self):
+        return f'Syllabus for week {self.week} of course {self.course}'
 
-# SKILL GAINED
-# skill id
+class Skill(models.Model):
+    ''' Skill Model '''
+
+    name = models.CharField(max_length=100)
+    course = models.ManyToManyField(
+        Course,
+        related_name='skills'
+    )
+
+    def __str__(self):
+        return f'Skill: {self.name}'
+
+
+    # course = models.ForeignKey(
+    #     Course,
+    #     related_name='skills',
+    #     on_delete=models.DO_NOTHING # test this. if it doesn't work
+    #     # on_delete=models.CASCADE
+    # )
 
 
 ## USER (this will be in jwt_auth, not here)
