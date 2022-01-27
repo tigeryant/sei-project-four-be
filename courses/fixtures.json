@@ -4,7 +4,19 @@
   "pk": 1,
   "fields": {
     "name": "Test course 1",
-    "length": 6
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 6,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "This is my bio!",
+    "prerequisites": [
+      6,
+      3,
+      4,
+      5,
+      7
+    ]
   }
 },
 {
@@ -12,7 +24,13 @@
   "pk": 2,
   "fields": {
     "name": "Test course 2",
-    "length": 2
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 2,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": []
   }
 },
 {
@@ -20,16 +38,198 @@
   "pk": 3,
   "fields": {
     "name": "Test course 3",
-    "length": 4
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 4,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": [
+      1
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 4,
+  "fields": {
+    "name": "Test course 4",
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 3,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": [
+      1
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 5,
+  "fields": {
+    "name": "Test course 5",
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 6,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": [
+      1
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 6,
+  "fields": {
+    "name": "Test course 6",
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 7,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": [
+      1
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 7,
+  "fields": {
+    "name": "Test course 7",
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 8,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": [
+      1
+    ]
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 8,
+  "fields": {
+    "name": "Test course 8",
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 2,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": []
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 9,
+  "fields": {
+    "name": "Test course 9",
+    "image": "https://i.imgur.com/z7fPkB9.png",
+    "length": 3,
+    "overview": "this is the course overview",
+    "instructor_name": "John Davies",
+    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+    "instructor_bio": "John Davies instructor bio",
+    "prerequisites": []
   }
 },
 {
   "model": "courses.review",
+  "pk": 3,
+  "fields": {
+    "content": "Authed review",
+    "rating": 5,
+    "course": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "courses.review",
+  "pk": 5,
+  "fields": {
+    "content": "Authed review",
+    "rating": 5,
+    "course": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "courses.review",
+  "pk": 7,
+  "fields": {
+    "content": "My first review of this course",
+    "rating": 2,
+    "course": 1,
+    "owner": 4
+  }
+},
+{
+  "model": "courses.review",
+  "pk": 8,
+  "fields": {
+    "content": "My second review of this course",
+    "rating": 3,
+    "course": 1,
+    "owner": 4
+  }
+},
+{
+  "model": "courses.weeklysyllabus",
+  "pk": 3,
+  "fields": {
+    "content": "weekly syllabus content",
+    "description": "my syllabus description",
+    "week": 1,
+    "course": 1
+  }
+},
+{
+  "model": "courses.weeklysyllabus",
+  "pk": 4,
+  "fields": {
+    "content": "content 2",
+    "description": "my syllabus description",
+    "week": 2,
+    "course": 1
+  }
+},
+{
+  "model": "courses.skill",
   "pk": 1,
   "fields": {
-    "content": "This is my first review",
-    "rating": 3,
-    "course": 1
+    "name": "my first skill",
+    "course": [
+      1
+    ]
+  }
+},
+{
+  "model": "courses.skill",
+  "pk": 2,
+  "fields": {
+    "name": "Skill on deleted course",
+    "course": [
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "courses.skill",
+  "pk": 3,
+  "fields": {
+    "name": "skill on multiple courses",
+    "course": [
+      8
+    ]
   }
 }
 ]
