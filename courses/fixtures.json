@@ -1,235 +1,292 @@
 [
-{
-  "model": "courses.course",
-  "pk": 1,
-  "fields": {
-    "name": "Test course 1",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 6,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "This is my bio!",
-    "prerequisites": [
-      6,
-      3,
-      4,
-      5,
-      7
-    ]
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "name": "Elliptic Curves and Cryptography",
+      "image": "https://i.imgur.com/rvhIr63.png",
+      "length": 6,
+      "overview": "The subject of elliptic curves encompasses a vast amount of mathematics. Our aim in this section is to summarize just enough of the basic theory for cryptographic applications.",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John is a cryptographer with four years experience in the study of cryptography.",
+      "prerequisites": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "name": "Cryptanalysis",
+      "image": "https://i.imgur.com/z7fPkB9.png",
+      "length": 2,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": []
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+      "name": "Prime Numbers, Unique Factorization and Finite Fields",
+      "image": "https://i.imgur.com/iJRo3Eo.png",
+      "length": 4,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": []
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+      "name": "Abstract Algebra for Cryptography",
+      "image": "https://i.imgur.com/VsO5ZRg.png",
+      "length": 3,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": []
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+      "name": "Discrete Logarithms and Diffie-Hellman",
+      "image": "https://i.imgur.com/2olDVYZ.png",
+      "length": 6,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+      "name": "Number Theory for Cryptography",
+      "image": "https://i.imgur.com/JrNsgOt.jpg",
+      "length": 7,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 7,
+    "fields": {
+      "name": "Digital Signatures",
+      "image": "https://i.imgur.com/LsxWFjk.png",
+      "length": 8,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 8,
+    "fields": {
+      "name": "Introduction to Cryptography",
+      "image": "https://i.imgur.com/Rtlbrrb.jpg",
+      "length": 2,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": []
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 9,
+    "fields": {
+      "name": "Lattices and Cryptography",
+      "image": "https://i.imgur.com/VqWS5US.png",
+      "length": 3,
+      "overview": "this is the course overview",
+      "instructor_name": "John Davies",
+      "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
+      "instructor_bio": "John Davies instructor bio",
+      "prerequisites": []
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 3,
+    "fields": {
+      "content": "Authed review",
+      "rating": 5,
+      "course": 2,
+      "owner": 1
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 5,
+    "fields": {
+      "content": "Authed review",
+      "rating": 5,
+      "course": 2,
+      "owner": 1
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 7,
+    "fields": {
+      "content": "My first review of this course",
+      "rating": 2,
+      "course": 1,
+      "owner": 1
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 8,
+    "fields": {
+      "content": "My second review of this course",
+      "rating": 3,
+      "course": 1,
+      "owner": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 3,
+    "fields": {
+      "content": "The subject of elliptic curves encompasses a vast amount of mathematics. Our aim in this section is to summarize just enough of the basic theory for cryptographic applications.",
+      "description": "An introdution to elliptic curves",
+      "week": 1,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 4,
+    "fields": {
+      "content": "In the previous section we developed the theory of elliptic curves geometrically. For example, the sum of two distinct points P and Q on an elliptic curve E is defined by drawing the line L connecting P to Q and then finding the third point where L and E intersect. However, in order to apply the theory of elliptic curves to cryptography, we need to look at elliptic curves whose points have coordinates in a finite field Fp.",
+      "description": "Elliptic curves over finite fields",
+      "week": 2,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 5,
+    "fields": {
+      "content": "Let E be an elliptic curve over the finite field Fp and let P and Q be points in E(Fp). The Elliptic Curve Discrete Logarithm Problem (ECDLP) is the problem of finding an integer n such that Q = nP. By analogy with the discrete logarithm problem for F* p, we denote this integer n by n = logP (Q).",
+      "description": "The elliptic curve discrete logarithm problem",
+      "week": 3,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 6,
+    "fields": {
+      "content": "The Elliptic Curve Digital Signature Algorithm (ECDSA), which is described in the digital signatures module, is a straightforward analogue of the digital signature algorithm (DSA).",
+      "description": "The Elliptic Curve Digital Signature Algorithm (ECDSA)",
+      "week": 4,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 7,
+    "fields": {
+      "content": "For students unfamiliar with the theory of groups, we briefly introduce a few basic concepts that should help to place the study of discrete logarithms into a broader context.",
+      "description": "An overview of the theory of groups",
+      "week": 5,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 8,
+    "fields": {
+      "content": "In this section we introduce the student to Lenstra's elliptic curve factorization algorithm. It is the third fastest classical algorithm of its kind.",
+      "description": "Lenstra's elliptic curve factorization algorithm",
+      "week": 6,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 9,
+    "fields": {
+      "content": "Computers speak binary, so they are especially well suited to doing calculations modulo 2. This suggests that it might be more efficient to use elliptic curves modulo 2.",
+      "description": "Elliptic curves over F2 and F2K",
+      "week": 7,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.weeklysyllabus",
+    "pk": 10,
+    "fields": {
+      "content": "There are many applications of the Weil pairing in which it is necessary to work in fields Fpk of prime power order. In this section we discuss the m-embedding degree, which is the smallest value of k such that E(Fpk )[m] is as large as possible, and we give an application called the MOV algorithm that reduces the ECDLP in E(Fp) to the DLP in F* pk . We then describe distortion maps on E and use them to define a modified Weil pairing ^em for which ^em(P, P) is nontrivial.",
+      "description": "The Weil Pairing over fields of prime power order",
+      "week": 8,
+      "course": 1
+    }
+  },
+  {
+    "model": "courses.skill",
+    "pk": 1,
+    "fields": {
+      "name": "my first skill",
+      "course": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "courses.skill",
+    "pk": 2,
+    "fields": {
+      "name": "Skill on deleted course",
+      "course": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "model": "courses.skill",
+    "pk": 3,
+    "fields": {
+      "name": "skill on multiple courses",
+      "course": [
+        8
+      ]
+    }
   }
-},
-{
-  "model": "courses.course",
-  "pk": 2,
-  "fields": {
-    "name": "Test course 2",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 2,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": []
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 3,
-  "fields": {
-    "name": "Test course 3",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 4,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": [
-      1
-    ]
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 4,
-  "fields": {
-    "name": "Test course 4",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 3,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": [
-      1
-    ]
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 5,
-  "fields": {
-    "name": "Test course 5",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 6,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": [
-      1
-    ]
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 6,
-  "fields": {
-    "name": "Test course 6",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 7,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": [
-      1
-    ]
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 7,
-  "fields": {
-    "name": "Test course 7",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 8,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": [
-      1
-    ]
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 8,
-  "fields": {
-    "name": "Test course 8",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 2,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": []
-  }
-},
-{
-  "model": "courses.course",
-  "pk": 9,
-  "fields": {
-    "name": "Test course 9",
-    "image": "https://i.imgur.com/z7fPkB9.png",
-    "length": 3,
-    "overview": "this is the course overview",
-    "instructor_name": "John Davies",
-    "instructor_image": "https://i.imgur.com/38vwuN8.jpg",
-    "instructor_bio": "John Davies instructor bio",
-    "prerequisites": []
-  }
-},
-{
-  "model": "courses.review",
-  "pk": 3,
-  "fields": {
-    "content": "Authed review",
-    "rating": 5,
-    "course": 2,
-    "owner": 1
-  }
-},
-{
-  "model": "courses.review",
-  "pk": 5,
-  "fields": {
-    "content": "Authed review",
-    "rating": 5,
-    "course": 2,
-    "owner": 1
-  }
-},
-{
-  "model": "courses.review",
-  "pk": 7,
-  "fields": {
-    "content": "My first review of this course",
-    "rating": 2,
-    "course": 1,
-    "owner": 1
-  }
-},
-{
-  "model": "courses.review",
-  "pk": 8,
-  "fields": {
-    "content": "My second review of this course",
-    "rating": 3,
-    "course": 1,
-    "owner": 1
-  }
-},
-{
-  "model": "courses.weeklysyllabus",
-  "pk": 3,
-  "fields": {
-    "content": "weekly syllabus content",
-    "description": "my syllabus description",
-    "week": 1,
-    "course": 1
-  }
-},
-{
-  "model": "courses.weeklysyllabus",
-  "pk": 4,
-  "fields": {
-    "content": "content 2",
-    "description": "my syllabus description",
-    "week": 2,
-    "course": 1
-  }
-},
-{
-  "model": "courses.skill",
-  "pk": 1,
-  "fields": {
-    "name": "my first skill",
-    "course": [
-      1
-    ]
-  }
-},
-{
-  "model": "courses.skill",
-  "pk": 2,
-  "fields": {
-    "name": "Skill on deleted course",
-    "course": [
-      6,
-      7
-    ]
-  }
-},
-{
-  "model": "courses.skill",
-  "pk": 3,
-  "fields": {
-    "name": "skill on multiple courses",
-    "course": [
-      8
-    ]
-  }
-}
 ]
